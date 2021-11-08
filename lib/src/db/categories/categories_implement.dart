@@ -1,6 +1,6 @@
 import 'package:dart_grpc_server/dart_grpc_server.dart';
 
-class CategoriesServices implements ICategoriesService {
+class CategoriesServices implements ICategoriesServices {
   @override
   Category? createCategory(Category category) {
     // TODO: implement createCategory

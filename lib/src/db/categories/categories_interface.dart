@@ -1,7 +1,7 @@
 import 'package:dart_grpc_server/dart_grpc_server.dart';
 
-abstract class ICategoriesService {
-  factory ICategoriesService() => CategoriesServices();
+abstract class ICategoriesServices {
+  factory ICategoriesServices() => CategoriesServices();
 
   Category? getCategoryByName(String name) {}
   Category? getCategoryById(int id) {}
@@ -11,4 +11,4 @@ abstract class ICategoriesService {
   List<Category>? getCategories() {}
 }
 
-final categoriesServices = ICategoriesService();
+final categoriesServices = ICategoriesServices();
