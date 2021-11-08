@@ -18,3 +18,29 @@ service GroceriesService {
 
     rpc getItemsByCategory (Category) returns (AllItemsofCategory);
 }
+
+message AllItemsofCategory {
+    int32 categoryId = 3;
+    repeated Item items = 1;
+}
+
+message Category {
+    int32 id =1;
+    string name = 2;
+}
+
+message Categories {
+    repeated Category categories = 1;
+}
+
+message Empty {}
+
+message Item {
+    int32 id = 1;
+    string name = 2;
+    int32 category = 3;
+}
+
+message Items {
+    repeated Item items = 1;
+}
