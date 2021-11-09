@@ -43,7 +43,7 @@ class GroceriesService extends GroceriesServiceBase {
   }
 
   @override
-  Future<Items> getAllItemss(ServiceCall call, Empty request) {
+  Future<Items> getAllItems(ServiceCall call, Empty request) {
     // TODO: implement getAllItemss
     throw UnimplementedError();
   }

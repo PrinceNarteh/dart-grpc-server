@@ -4,7 +4,7 @@ service GroceriesService {
     rpc createItem (Item) returns (Item);
     rpc createCategory (Category) returns (Category);
     
-    rpc getAllItemss (Empty) returns (Items);
+    rpc getAllItems (Empty) returns (Items);
     rpc getAllCategories (Empty) returns (Categories);
 
     rpc getItem (Item) returns (Item);

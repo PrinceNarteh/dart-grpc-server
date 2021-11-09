@@ -22,8 +22,8 @@ class GroceriesServiceClient extends $grpc.Client {
       '/GroceriesService/createCategory',
       ($0.Category value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Category.fromBuffer(value));
-  static final _$getAllItemss = $grpc.ClientMethod<$0.Empty, $0.Items>(
-      '/GroceriesService/getAllItemss',
+  static final _$getAllItems = $grpc.ClientMethod<$0.Empty, $0.Items>(
+      '/GroceriesService/getAllItems',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Items.fromBuffer(value));
   static final _$getAllCategories = $grpc.ClientMethod<$0.Empty, $0.Categories>(
@@ -76,9 +76,9 @@ class GroceriesServiceClient extends $grpc.Client {
     return $createUnaryCall(_$createCategory, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Items> getAllItemss($0.Empty request,
+  $grpc.ResponseFuture<$0.Items> getAllItems($0.Empty request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$getAllItemss, request, options: options);
+    return $createUnaryCall(_$getAllItems, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Categories> getAllCategories($0.Empty request,
@@ -142,8 +142,8 @@ abstract class GroceriesServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) => $0.Category.fromBuffer(value),
         ($0.Category value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Items>(
-        'getAllItemss',
-        getAllItemss_Pre,
+        'getAllItems',
+        getAllItems_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
@@ -216,9 +216,9 @@ abstract class GroceriesServiceBase extends $grpc.Service {
     return createCategory(call, await request);
   }
 
-  $async.Future<$0.Items> getAllItemss_Pre(
+  $async.Future<$0.Items> getAllItems_Pre(
       $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getAllItemss(call, await request);
+    return getAllItems(call, await request);
   }
 
   $async.Future<$0.Categories> getAllCategories_Pre(
@@ -264,8 +264,7 @@ abstract class GroceriesServiceBase extends $grpc.Service {
   $async.Future<$0.Item> createItem($grpc.ServiceCall call, $0.Item request);
   $async.Future<$0.Category> createCategory(
       $grpc.ServiceCall call, $0.Category request);
-  $async.Future<$0.Items> getAllItemss(
-      $grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Items> getAllItems($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Categories> getAllCategories(
       $grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Item> getItem($grpc.ServiceCall call, $0.Item request);
